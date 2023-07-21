@@ -10,11 +10,11 @@ from flask import Flask
 import requests, sys
 app = Flask(__name__)
 
-def gather_api_data():
+def gather_data():
     """gets users and todo lists from api
     user id is the second argument
     you can
-        for items in todos
+    for items in todos
     """
     if len(sys.argv) != 2:
         return  # code only works if we got a user id
@@ -41,4 +41,4 @@ def gather_api_data():
     print('Employee ' + username + ' is done with tasks(' + str(tasks_done) + '/' + str(tasks_total) + ')')
 
 if __name__ == '__main__':
-    gather_api_data()
+    gather_data()
