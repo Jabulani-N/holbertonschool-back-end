@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """remember the shebang
-
 Write a Python script that,
 using this REST API,
 for a given employee ID (input argument),
