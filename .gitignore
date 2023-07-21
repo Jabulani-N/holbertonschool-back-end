@@ -1,3 +1,10 @@
+# cusotm scipts and modules - Jabulani Ndhlovu
+*itter*
+__pycache__/
+executrix*
+*.swp
+*.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
