@@ -27,6 +27,7 @@ def gather_data():
     todos = requests.get('https://jsonplaceholder.typicode.com/todos',\
                           params={"userId": id}).json()
     # get requests where the conditions in params are met
+    # traveling to the url, todos looks like an array [] of dictionaries {}
     username = user.get("name")
 
 
