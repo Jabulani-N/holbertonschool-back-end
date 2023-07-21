@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""remmber the shebang
+"""remember the shebang
 
 Write a Python script that,
 using this REST API,
@@ -10,7 +10,7 @@ from flask import Flask
 import requests, sys
 app = Flask(__name__)
 
-def gather_data():
+def gather_api_data():
     """gets users and todo lists from api
     user id is the second argument
     you can
@@ -41,4 +41,4 @@ def gather_data():
     print('Employee ' + username + ' is done with tasks(' + str(tasks_done) + '/' + str(tasks_total) + ')')
 
 if __name__ == '__main__':
-    gather_data()
+    gather_api_data()
