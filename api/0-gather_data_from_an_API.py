@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """returns information about emplopyee todo list progress"""
-
 from flask import Flask
 import requests
 import sys
@@ -13,10 +12,8 @@ def gather_data():
     you can
     for items in todos
     """
-
     if len(sys.argv) != 2:
         return  # code only works if we got a user id
-
     id = sys.argv[1]  # user gives id number in request.
     # argv[0] is funciton name
     user = requests.get('https://jsonplaceholder.typicode.com/users/{}'
@@ -30,7 +27,6 @@ def gather_data():
     tasks_done = 0
     tasks_titles = []
     tasks_total = 0
-
     for task in todos:
         tasks_total += 1
         if task['completed'] is True:
