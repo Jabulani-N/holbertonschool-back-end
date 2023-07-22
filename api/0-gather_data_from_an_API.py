@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""remember the shebang
+""" remember the shebang
 Write a Python script that,
 using this REST API,
 for a given employee ID (input argument),
@@ -10,7 +10,7 @@ import requests, sys
 app = Flask(__name__)
 
 def gather_data():
-    """gets users and todo lists from api
+    """ gets users and todo lists from api
     user id is the second argument
     you can
     for items in todos
