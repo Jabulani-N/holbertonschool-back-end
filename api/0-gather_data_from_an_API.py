@@ -5,6 +5,7 @@ using this REST API,
 for a given employee ID (input argument),
 returns information about their todo list progress
 """
+
 from flask import Flask
 import requests, sys
 app = Flask(__name__)
@@ -15,6 +16,7 @@ def gather_data():
     you can
     for items in todos
     """
+
     if len(sys.argv) != 2:
         return  # code only works if we got a user id
 
@@ -38,6 +40,8 @@ def gather_data():
             tasks_done += 1
             tasks_titles.append(task['title'])
     print('Employee ' + username + ' is done with tasks(' + str(tasks_done) + '/' + str(tasks_total) + ')')
+    for taskname in tasks_titles:
+        print('\t ' + taskname)
 
 if __name__ == '__main__':
     gather_data()
