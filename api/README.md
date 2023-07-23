@@ -9,3 +9,8 @@ Resources:
 * [What is a REST API?](https://www.sitepoint.com/rest-api/)
 * [What are microservices](https://smartbear.com/learn/api-design/microservices/)
 * [PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry](https://peps.python.org/pep-0008/)
+
+## Task1:
+
+[how to use scv to write to a csv file](https://stackoverflow.com/questions/45549424/exporting-python-output-into-csv-or-text-file-beginner)
+
