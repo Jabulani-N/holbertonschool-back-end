@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """returns information about emplopyee todo list progress"""
-from flask import Flask
 import requests
 import sys
 
