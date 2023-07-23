@@ -31,7 +31,7 @@ def gather_data():
             tasks_done += 1
             tasks_titles.append(task['title'])
     print('Employee ' + username + ' is done with tasks(' +
-          str(tasks_done) + '/' + str(tasks_total) + ')')
+          str(tasks_done) + '/' + str(tasks_total) + '):')
     for taskname in tasks_titles:
         print('\t ' + taskname)
 
