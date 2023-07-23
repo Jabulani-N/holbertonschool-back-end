@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """returns information about emplopyee todo list progress"""
 from flask import Flask
-import sys
 import requests
+import sys
 app = Flask(__name__)
 
 
