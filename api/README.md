@@ -31,3 +31,5 @@ after which `data.csv` in  the terminal results in `9,3,7,4,1,3,7,8,1,3` (it wil
 
 * do not forget that "write" is different from "append" when it comes to files.
 
+To surround your outputs in doublequotes when using `csv.writerow`, use `csv.writer(whatever_variable_you_opened_your_file_as, quoting=csv.QUOTE_ALL)`
+
