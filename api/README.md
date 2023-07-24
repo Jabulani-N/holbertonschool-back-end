@@ -12,5 +12,22 @@ Resources:
 
 ## Task1:
 
-[how to use scv to write to a csv file](https://stackoverflow.com/questions/45549424/exporting-python-output-into-csv-or-text-file-beginner)
+[how to use scv to write to a csv file](https://stackoverflow.com/questions/45549424/exporting-python-output-into-csv-or-text-file-beginner) features the foloowign example:
+
+```
+import csv
+import random
+
+data = [random.randint(1, 10) for _ in range(10)]
+
+with open('data.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow(data)
+
+```
+after which `data.csv` in  the terminal results in `9,3,7,4,1,3,7,8,1,3` (it will be random numbers)
+
+* `writerow` is able to write one row to file. `writerows` can recieve a 2-d array and each contained array will be it's own row written to the file
+
+* do not forget that "write" is different from "append" when it comes to files.
 
