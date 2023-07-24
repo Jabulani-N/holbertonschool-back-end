@@ -11,7 +11,7 @@ __pycache__/
 *$py.class
 
 #compiled files
-*.csv
+# *.csv
 
 # C extensions
 *.so
