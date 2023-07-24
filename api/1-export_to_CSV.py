@@ -42,6 +42,19 @@ def gather_data():
         writer = csv.writer(f)
         writer.writerows(task_compilation)
 
+    tasks_done = 0
+    tasks_titles = []
+    tasks_total = 0
+    for task in todos:
+        tasks_total += 1
+        if task['completed'] is True:
+            tasks_done += 1
+            tasks_titles.append(task['title'])
+    print('Employee ' + username + ' is done with tasks(' +
+          str(tasks_done) + '/' + str(tasks_total) + '):')
+    for taskname in tasks_titles:
+        print('\t ' + taskname)
+
 
 if __name__ == '__main__':
     gather_data()
