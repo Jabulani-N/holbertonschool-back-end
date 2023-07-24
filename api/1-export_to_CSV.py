@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""returns information about emplopyee todo list progress
+"""does task0 and also writes a csv file
 
 we're gonna use csv.writer and writerow to write the contents of an array
 into a csv file

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""returns information about emplopyee todo list progress"""
+"""does task0 and also exports to json"""
+import json
 import requests
 import sys
 
