@@ -20,8 +20,8 @@ def gather_data():
     todos = requests.get('https://jsonplaceholder.typicode.com/todos',
                          params={"userId": id}).json()
     # get requests where the conditions in params are met
-    # traveling to the url, todos looks like an array [] of dictionaries {}
-    username = user.get("name")
+    # traveling to the url, todos is an array [] of dictionaries {}
+    user_name = user.get("name")
     tasks_done = 0
     tasks_titles = []
     tasks_total = 0
@@ -30,7 +30,7 @@ def gather_data():
         if task['completed'] is True:
             tasks_done += 1
             tasks_titles.append(task['title'])
-    print('Employee ' + username + ' is done with tasks(' +
+    print('Employee ' + user_name + ' is done with tasks(' +
           str(tasks_done) + '/' + str(tasks_total) + '):')
     for taskname in tasks_titles:
         print('\t ' + taskname)
