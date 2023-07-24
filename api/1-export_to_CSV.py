@@ -28,13 +28,14 @@ def gather_data():
                          params={"userId": id}).json()
     # get requests where the conditions in params are met
     # traveling to the url, todos looks to be an array [] of dictionaries {}
-    username = user.get("name")
+    user_name = user.get("name")
+    user_username = user.get("username")
 
     task_compilation = []
     for task in todos:
         task_data = []
         task_data.append('' + str(task['userId']))
-        task_data.append('' + username + '')
+        task_data.append('' + user_username + '')
         task_data.append('' + str(task['completed']))
         task_data.append('' + task['title'] + '')
         task_compilation.append(task_data)
@@ -50,7 +51,7 @@ def gather_data():
         if task['completed'] is True:
             tasks_done += 1
             tasks_titles.append(task['title'])
-    print('Employee ' + username + ' is done with tasks(' +
+    print('Employee ' + user_name + ' is done with tasks(' +
           str(tasks_done) + '/' + str(tasks_total) + '):')
     for taskname in tasks_titles:
         print('\t ' + taskname)
