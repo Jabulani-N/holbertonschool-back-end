@@ -39,7 +39,7 @@ def gather_data():
         task_data.append('' + task['title'] + '')
         task_compilation.append(task_data)
     with open(id + '.csv', 'w') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerows(task_compilation)
 
     tasks_done = 0
