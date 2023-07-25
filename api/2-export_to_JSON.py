@@ -53,7 +53,7 @@ def gather_data():
     for task in todos:
         task_profile = {}
         task_profile["task"] = task['title']
-        task_profile["completed"] = str(task['completed'])
+        task_profile["completed"] = task['completed']
         task_profile["username"] = user_usernmae
         user_profile[str(id)].append(task_profile)
 
