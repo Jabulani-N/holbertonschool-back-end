@@ -38,3 +38,7 @@ To surround your outputs in doublequotes when using `csv.writerow`, use `csv.wri
 testing
 
 `python3 2-export_to_JSON.py 2;cat 2.json`
+
+### Potential Pitfall
+
+be sure to hte json file wants the boolean of `completed`, not the string. this differs from the content task0 prints.
