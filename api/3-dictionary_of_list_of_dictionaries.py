@@ -1,18 +1,5 @@
 #!/usr/bin/python3
-"""does task0 and also exports to json
-format is a dictoionary
-this dictionary has 1 key:value pair
-    key: user ID (just the number)
-    Value: 1-demensional array
-        1-dimensional array entry contains
-            1 entry per task
-            each task/entry contains 1 dictionary
-                each dictionary contains 3 key:value pairs
-                    "task": "TASK_TITLE"
-                    "completed": TASK_COMPLETED_STATUS
-                    "user_name": "USER_NAME"
-"""
-import json
+"""returns information about emplopyee todo list progress"""
 import requests
 import sys
 
@@ -35,7 +22,6 @@ def gather_data():
     # get requests where the conditions in params are met
     # traveling to the url, todos is an array [] of dictionaries {}
     user_name = user.get("name")
-    user_usernmae = user.get("username")
     tasks_done = 0
     tasks_titles = []
     tasks_total = 0
@@ -49,17 +35,6 @@ def gather_data():
     for taskname in tasks_titles:
         print('\t ' + taskname)
 
-    user_profile = {str(id):[]}  # we're gonna append to this empty array each time we build a task profile below
-    for task in todos:
-        task_profile = {}
-        task_profile["task"] = task['title']
-        task_profile["completed"] = str(task['completed'])
-        task_profile["username"] = user_usernmae
-        user_profile[str(id)].append(task_profile)
-
-        json_user_profile = json.dumps(user_profile)
-        with open(str(id) + '.json', 'w') as f:
-            f.write(json_user_profile)
 
 if __name__ == '__main__':
     gather_data()
