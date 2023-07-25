@@ -49,7 +49,7 @@ def gather_data():
     for taskname in tasks_titles:
         print('\t ' + taskname)
 
-    user_profile = {str(id):[]}  # we're gonna append to this empty array each time we build a task profile below
+    user_profile = {str(id): []}
     for task in todos:
         task_profile = {}
         task_profile["task"] = task['title']
@@ -60,6 +60,7 @@ def gather_data():
         json_user_profile = json.dumps(user_profile)
         with open(str(id) + '.json', 'w') as f:
             f.write(json_user_profile)
+
 
 if __name__ == '__main__':
     gather_data()
