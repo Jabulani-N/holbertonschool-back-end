@@ -41,4 +41,4 @@ testing
 
 ### Potential Pitfall
 
-be sure to hte json file wants the boolean of `completed`, not the string. this differs from the content task0 prints.
+The json file wants the boolean of `completed`, not the string. This differs from the content task0 prints.
